@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>Corona Guard</title>
+    
+    <link rel="stylesheet" href="./index.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.18.2/cytoscape.min.js" integrity="sha512-CBGCXtszkG5rYlQSTNUzk54/731Kz28WPk2uT1GCPCqgfVRJ2v514vzzf16HuGX9WVtE7JLqRuAERNAzFZ9Hpw==" crossorigin="anonymous"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    
+    
+</head>
+<style>
+   
+    
+</style>
+<body>
+    <div id="header">
+        <div style="float:left;">
+                <p style="color:white;font-size:25px">Corona Guard<i class="fa fa-shield " style="padding-left: 5px;" aria-hidden="true"></i></p>
+        </div>
+        <li>
+            <a href="./apply.html">Apply</a>
+        </li>
+        <li>
+            <a href="./vaccine.html">Register</a>
+        </li>
+        <li>
+            <a href="./contact.html" >Trace Contact</a>
+        </li>
+        <li>
+            <a href="./mst.html" >Optimum Path</a>
+        </li>
+        <li>
+            <a href="./index.html" class="active">Home</a>
+        </li>
+    </div>
+    <div class="row center" id="container">
+        <div class="col">
+            <div id="cy"></div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col right">
+                    <label for="source">Select source</label>
+                    <select name="citiyelecter" id="source" style="width:120px">
+                        <option value="1" selected>Pune</option>
+                        <option value="2">Mumbai</option>
+                        <option value="3">Nashik</option>
+                        <option value="4">Nagpur</option>
+                        <option value="5">Bhopal</option>
+                        <option value="6">Raipur</option>
+                        <option value="7">Hyedrabad</option>
+                        <option value="8">Bengaluru</option>
+                        
+                    </select>
+                </div>
+                <div class="col right">
+                    <label for="source">Select Destination</label>
+                    <select name="citiyelecter" id="destination" style="width:120px">
+                        <option value="1" selected>Pune</option>
+                        <option value="2">Mumbai</option>
+                        <option value="3">Nashik</option>
+                        <option value="4">Nagpur</option>
+                        <option value="5">Bhopal</option>
+                        <option value="6">Raipur</option>
+                        <option value="7">Hyedrabad</option>
+                        <option value="8">Bengaluru</option>
+                        
+                    </select>
+                </div>
+                <div class="col" style="margin-top:140px"><button onClick="handClick()" style="height:20px;width:80px">Result</button></div>
+                <!-- <div class="col right"><button onClick="handClick()">Show Result</button></div>
+                <div class="col right"><button onClick="handClick()">Show Result</button></div> -->
+            </div>
+            <div class="row" style="margin-top:20%">
+                <h2 id="route" style="display:none;">Route aaega.......</h2>
+                
+            </div>
+            <div class="row">
+                <h3 id="cost" style="display:none;">Cost aaega</h3>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+	
+    
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./mst.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.18.2/cytoscape.min.js" integrity="sha512-CBGCXtszkG5rYlQSTNUzk54/731Kz28WPk2uT1GCPCqgfVRJ2v514vzzf16HuGX9WVtE7JLqRuAERNAzFZ9Hpw==" crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header">
+        <div style="float:left;">
+                <p style="color:white;font-size:25px">Corona Guard<i class="fa fa-shield " style="padding-left: 5px;" aria-hidden="true"></i></p>
+        </div>
+        <li>
+            <a href="./apply.html">Apply</a>
+        </li>
+        <li>
+            <a href="./vaccine.html">Register</a>
+        </li>
+        <li>
+            <a href="./contact.html" >Trace Contact</a>
+        </li>
+        <li>
+            <a href="./mst.html" class="active" >Optimum Path</a>
+        </li>
+        <li>
+            <a href="./index.html" >Home</a>
+        </li>
+    </div>
+    
+    
+    <script src="./mst.js"></script>
+    <div class="row">
+        <div class="col">
+            <div id="cy"></div>
+        </div>
+        <div class="col center">
+            <button onClick="onClickHand()" style="height:50px;width:200px">Get Best Route</button>
+        </div>
+    </div>
+</body>
+</html>

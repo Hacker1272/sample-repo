@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply</title>
+    <link rel="stylesheet" href="./apply.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script type="text/javascript" src="apply.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div style="float:left;">
+                <p style="color:white;font-size:25px">Corona Guard<i class="fa fa-shield " style="padding-left: 5px;" aria-hidden="true"></i></p>
+        </div>
+        <li>
+            <a href="./apply.html" class="active">Apply</a>
+        </li>
+        <li>
+            <a href="./vaccine.html">Register</a>
+        </li>
+        <li>
+            <a href="./contact.html" >Trace Contact</a>
+        </li>
+        <li>
+            <a href="./mst.html" >Optimum Path</a>
+        </li>
+        <li>
+            <a href="./index.html" >Home</a>
+        </li>
+    </div>
+    <div class="container">
+        <form  method="post" id="form" onsubmit="event.preventDefault()">
+            <div class="row">
+                <div class="col">
+                    <label for="pid">Enter the patient id</label><br>
+                    <input type="text" id="pid" name="pid" placeholder="Enter the patient id">
+                </div>
+                <div class="col">
+                    <label for="pid">Select a date for vaccination</label><br>
+                    <input type="date" id="vdate" name="vdate">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="centre">Select a centre for vaccination</label><br>
+                    <select name="center" id="centre" style="width: 300px;height:50px;">
+                        <option value="1">Centre 1</option>
+                        <option value="2">Centre 2</option>
+                        <option value="3">Centre 3</option>
+                        <option value="4">Centre 4</option>
+                        <option value="5">Centre 5</option>
+                        <option value="6">Centre 6</option>
+                        <option value="7">Centre 7</option>
+                        <option value="8">Centre 8</option>
+                    </select>
+                </div>
+                
+                
+            </div>
+            <div class="row">
+                <button type="submit" onClick="clickHand()">Submit</button>
+            </div>
+        </form>
+    </div>
+    <h1 id="slot"></h1>
+</body>
+</html>

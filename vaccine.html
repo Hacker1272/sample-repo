@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine Register</title>
+    <link rel="stylesheet" href="./vaccine.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./vaccine.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div style="float:left;">
+                <p style="color:white;font-size:25px">Corona Guard<i class="fa fa-shield " style="padding-left: 5px;" aria-hidden="true"></i></p>
+        </div>
+        <li>
+            <a href="./apply.html" >Apply</a>
+        </li>
+        <li>
+            <a href="./vaccine.html" class="active">Register</a>
+        </li>
+        <li>
+            <a href="./contact.html" >Trace Contact</a>
+        </li>
+        <li>
+            <a href="./mst.html" >Optimum Path</a>
+        </li>
+        <li>
+            <a href="./index.html" >Home</a>
+        </li>
+    </div>
+    <div class="container">
+        <form  method="post" id="form" onsubmit="event.preventDefault()">
+            <div class="row">
+                <div class="col">
+                    <label for="fname">First Name</label><br>
+                    <input type="text" name="fname" id="fname" placeholder="Enter your first name" required>
+                </div>
+                <div class="col">
+                    <label for="lname">Last Name</label><br>
+                    <input type="text" name="lname" id="lname" placeholder="Enter your last name" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="dob">Enter your Date Of Birth</label><br>
+                    <input type="date" name="dob" id="dob" placeholder="Enter your DOB">
+                </div>
+                <div class="col">
+                    <label for="adhar">Enter your aadhar number</label><br>
+                    <input type="text" id="adhar" placeholder="aadhaar number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="add">Enter your adderess</label><br>
+                    <input type="text" name="add" id="add" placeholder="enter your adderess">
+                </div>
+                <div class="col">
+                    <label for="gender">Select your gender</label>
+                    <div class="row" id="gender">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label><br>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row">
+                <button type="submit" name="submit" id="myButton" onclick="submitHand()" >Register</button>
+            </div>
+        </form>
+    </div>
+    <p id="patient_id" style="margin-left:300px;margin-top:80px"></p>
+</body>
+</html>
